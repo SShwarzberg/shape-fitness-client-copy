@@ -19,7 +19,7 @@ export default function ReadArticle() {
     useEffect(() => {
         async function getArticleBody() {
             const res = await fetch(
-                `http://localhost:3000${window.location.pathname}`
+                `https://celadon-peony-cd3125.netlify.app/.netlify/functions/api/${window.location.pathname}`
             )
             const data = await res.json()
             setArticle({

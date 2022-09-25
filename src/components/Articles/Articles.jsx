@@ -9,7 +9,9 @@ export default function Articles({ articleStyle, category }) {
 
     useEffect(() => {
         async function fetchArticles() {
-            const res = await fetch(`http://localhost:3000/${category}`)
+            const res = await fetch(
+                `https://celadon-peony-cd3125.netlify.app/.netlify/functions/api/${category}`
+            )
             const data = await res.json()
             setCurrentArticles(data)
         }

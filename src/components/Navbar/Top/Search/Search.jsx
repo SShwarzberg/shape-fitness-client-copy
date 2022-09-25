@@ -18,12 +18,15 @@ export default function Search({ sidebar }) {
     }
 
     function fetchSearchResults(value) {
-        fetch('http://localhost:3000/search', {
-            method: 'POST',
-            body: JSON.stringify({ data: (value && value) || searchInput }),
-            headers: { 'content-type': 'application/json' },
-            mode: 'cors',
-        })
+        fetch(
+            'https://celadon-peony-cd3125.netlify.app/.netlify/functions/api/search',
+            {
+                method: 'POST',
+                body: JSON.stringify({ data: (value && value) || searchInput }),
+                headers: { 'content-type': 'application/json' },
+                mode: 'cors',
+            }
+        )
             .then((res) => res.json())
             .then((data) => setSearchResults(data))
     }
