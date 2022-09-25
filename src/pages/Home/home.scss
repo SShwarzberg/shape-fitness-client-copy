@@ -1,0 +1,12 @@
+.home {
+    @media screen and (max-width: 1200px) {
+        margin: 0 auto;
+    }
+    .home-content {
+        max-width: 1200px;
+        margin: 190px auto 100px;
+        @media screen and (max-width: 900px) {
+            margin-top: 95px;
+        }
+    }
+}

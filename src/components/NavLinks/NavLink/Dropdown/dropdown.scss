@@ -1,0 +1,28 @@
+.dropdown {
+    white-space: nowrap;
+    position: absolute;
+    min-width: 180px;
+    box-shadow: 1px 16px 15px 0px rgba(0, 0, 0, 0.41);
+    border-radius: 5px;
+    cursor: auto;
+    .dropdown-list {
+        margin-top: 20px;
+        list-style: none;
+        border-radius: 0 0 5px 5px;
+        padding-left: 0;
+        background-color: white;
+        .dropdown-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .dropdown-option {
+            cursor: pointer;
+            padding: 16px 16px;
+            transition: all 0.3s ease-out;
+            border-radius: 5px;
+            &:hover {
+                background-color: #e0e0e5;
+            }
+        }
+    }
+}

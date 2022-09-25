@@ -1,0 +1,21 @@
+.home-category-link {
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    color: #595959;
+    font-size: 2rem;
+    width: fit-content;
+    align-items: center;
+    cursor: pointer;
+    @media screen and (max-width: 900px) {
+        font-size: 1.4rem;
+        margin: 20px auto;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+    img {
+        margin-top: 8px;
+        height: 25px;
+    }
+}

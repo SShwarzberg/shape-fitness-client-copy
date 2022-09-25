@@ -1,0 +1,24 @@
+.home-category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin: 80px 0 40px;
+}
+.bg-purple {
+    border-radius: 5px;
+    background: #f2eff6;
+    max-width: none;
+    padding: 40px;
+    @media screen and (max-width: 1200px) {
+        padding: 40px;
+    }
+    .home-category-list-content {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        @media screen and (max-width: 900px) {
+            gap: 100px;
+            flex-direction: column;
+        }
+    }
+}

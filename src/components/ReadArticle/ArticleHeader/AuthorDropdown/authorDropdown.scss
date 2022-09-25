@@ -1,0 +1,59 @@
+.author-dropdown {
+  position: absolute;
+  width: 360px;
+  z-index: 100;
+  background-color: transparent;
+  .author-dropdown-content {
+    padding: 16px;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    background-color: white;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    border-radius: 3px;
+    line-height: 1.15rem;
+    .author-dropdown-top {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 15px;
+      .author-dropdown-top-right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .author-dropdown-name {
+          font-size: 1.2rem;
+          font-weight: 900;
+          margin-top: 5px;
+          font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        }
+        .author-dropdown-insta-wrapper {
+          padding: 5px;
+          border: 1px solid black;
+          width: fit-content;
+          border-radius: 50%;
+          height: 18px;
+          width: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease-in-out;
+          scale: 0.9;
+          &:hover {
+            scale: 1.5;
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+    hr {
+      margin: 15px 0;
+    }
+    .shape-guidelines-link {
+      color: gray;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

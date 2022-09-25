@@ -1,0 +1,128 @@
+.footer {
+    display: flex;
+    background-color: #f2f2f2;
+    padding: 50px 68px;
+    @media screen and (max-width: 1200px) {
+        padding: 40px;
+    }
+    .footer-content {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 120px;
+        @media screen and (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            width: 100%;
+            flex-direction: row;
+        }
+        @media screen and (max-width: 1000px) {
+            flex-direction: column;
+        }
+        .footer-section-1 {
+            flex: 33%;
+            display: flex;
+            gap: 32px;
+            flex-direction: column;
+            @media screen and (max-width: 1200px) {
+                align-items: center;
+            }
+            .footer-newsletter {
+                width: 290px;
+                height: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                font-size: 0.875rem;
+                font-weight: 700;
+                border: 3px solid black;
+                transition: background-color, 0.1s ease-out;
+                background-color: white;
+                border-radius: 3px;
+                &:hover {
+                    background-color: #3e1517;
+                    border: 3px solid #3e1517;
+                    color: white;
+                }
+            }
+            .footer-socials {
+                @media screen and (max-width: 900px) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                    margin: 30px 0;
+                }
+                .footer-socials-links {
+                    display: flex;
+                    gap: 16px;
+                    @media screen and (max-width: 900px) {
+                        flex-wrap: wrap;
+                        flex-basis: 30%;
+                    }
+                    .footer-social-link {
+                        display: flex;
+                        align-items: start;
+                        justify-content: center;
+                        height: 40px;
+                        width: 40px;
+                        cursor: pointer;
+                        flex: 30%;
+                        img {
+                            filter: invert(38%) sepia(0%) saturate(58%) hue-rotate(215deg) brightness(88%) contrast(88%);
+                            height: 20px;
+                            transition: filter 0.1s ease-out;
+                            &:hover {
+                                filter: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-section-2 {
+            width: 66%;
+            flex: 66%;
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            @media screen and (max-width: 1200px) {
+                margin-bottom: 60px;
+                justify-content: space-between;
+            }
+            @media screen and (max-width: 900px) {
+                flex-direction: column;
+                align-items: start;
+                width: fit-content;
+                margin: auto;
+                gap: 0;
+            }
+            .general-footer-links {
+                padding-left: 0;
+                gap: 12px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                text-align: right;
+                max-width: 90%;
+                @media screen and (max-width: 900px) {
+                    text-align: left;
+                    margin-top: 60px;
+                    padding-top: 80px;
+                    border-top: 3px solid black;
+                }
+                .general-footer-link {
+                    color: rgb(90, 90, 90);
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: underline black;
+                    }
+                }
+            }
+        }
+    }
+}

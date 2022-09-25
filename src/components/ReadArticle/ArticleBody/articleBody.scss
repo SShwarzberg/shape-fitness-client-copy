@@ -1,0 +1,57 @@
+.article-body {
+    max-width: 600px;
+    .article-main-img {
+        object-fit: contain;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .photo-credit {
+        font-size: 0.75rem;
+        margin-bottom: 60px;
+    }
+    .related-link {
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom: 45px;
+    }
+}
+.rate-article {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .rating-buttons {
+        display: flex;
+        gap: 12px;
+        .like-button {
+            height: 35px;
+            width: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid black;
+            cursor: pointer;
+            img {
+                height: 50%;
+                width: 50%;
+            }
+        }
+        .dislike-button {
+            height: 35px;
+            width: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid black;
+            cursor: pointer;
+            img {
+                transform: rotate(180deg);
+                height: 50%;
+                width: 50%;
+            }
+        }
+    }
+}

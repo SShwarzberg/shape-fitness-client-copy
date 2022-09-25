@@ -1,0 +1,36 @@
+.article-sections {
+    position: sticky;
+    top: 100px;
+    width: 244px;
+    background-color: #f2f2f2;
+    padding: 1rem 1.2rem;
+    height: fit-content;
+    z-index: 0;
+    border-radius: 5px;
+    @media screen and (max-width: 1080px) {
+        display: none;
+    }
+    @media screen and (max-width: 1300px) {
+        top: 130px;
+    }
+    .article-sections-header {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .article-sections-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 14px 14px;
+        .article-sections-title {
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .selected-section {
+            font-weight: 900;
+        }
+    }
+}

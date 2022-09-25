@@ -1,0 +1,37 @@
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @media screen and (max-width: 1200px) {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .socials-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        background-color: rgb(241, 241, 241);
+        @media screen and (max-width: 900px) {
+            height: 35px;
+            width: 35px;
+        }
+        img {
+            height: 40%;
+            object-fit: contain;
+            cursor: pointer;
+            padding: 10px;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        .email {
+            height: 30%;
+        }
+        .twitter {
+            height: 50%;
+        }
+    }
+}

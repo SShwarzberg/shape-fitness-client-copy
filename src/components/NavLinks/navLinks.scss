@@ -1,0 +1,40 @@
+.navlinks {
+    margin-top: 24px;
+    max-width: 1200px;
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        padding: 0;
+        margin-bottom: 0;
+        .fitness {
+            width: fit-content;
+            cursor: pointer;
+            letter-spacing: 0.0625rem;
+            position: relative;
+            transition: 0.5s ease;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:active {
+                outline: 3px solid #014ecb;
+            }
+        }
+    }
+    .column {
+        flex-direction: column;
+        gap: 10px;
+        .fitness {
+            font-size: 1.05rem;
+            width: 250px;
+            padding: 16px 12px;
+            border-radius: 3px;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+                background-color: #113570;
+                color: white;
+            }
+        }
+    }
+}

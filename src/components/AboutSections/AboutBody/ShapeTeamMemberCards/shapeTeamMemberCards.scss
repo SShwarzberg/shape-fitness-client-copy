@@ -1,0 +1,31 @@
+.shape-team-member-cards {
+  margin-top: 60px;
+  .team-member-image {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .team-member-name {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  .team-member-description {
+    font-size: 0.875rem;
+    color: rgb(83, 83, 83);
+  }
+  p {
+    line-height: 1.75rem;
+    text-align: justify;
+  }
+  .about-member-read-more {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    a {
+      text-decoration: none;
+      color: rgb(81, 81, 81);
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
