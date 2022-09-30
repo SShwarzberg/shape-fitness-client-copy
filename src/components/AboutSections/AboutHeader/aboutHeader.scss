@@ -1,6 +1,10 @@
 .about-header {
   display: flex;
   flex-direction: column;
+  .about-page-title {
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
   .about-us-photo-credits {
     margin-top: 10px;
   }

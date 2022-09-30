@@ -9,14 +9,19 @@ export default function Articles({ articleStyle, category }) {
 
     useEffect(() => {
         async function fetchArticles() {
-            const res = await fetch(
-                `https://celadon-peony-cd3125.netlify.app/.netlify/functions/api/${category}`
-            )
-            const data = await res.json()
-            setCurrentArticles(data)
+            const res =
+                category &&
+                (await fetch(
+                    `https://shape-backend-server.netlify.app/.netlify/functions/api/${category}`,
+                    {
+                        headers: { accepts: 'application/json' },
+                    }
+                ))
+            const data = res && (await res?.json())
+            data && setCurrentArticles(data)
         }
         fetchArticles()
-    }, [])
+    }, [category])
 
     useEffect(() => {
         setAricleCategory()
@@ -30,7 +35,7 @@ export default function Articles({ articleStyle, category }) {
 
         const createArticles =
             currentArticles &&
-            currentArticles.map((article, i) => {
+            currentArticles?.map((article, i) => {
                 const newArticle = (
                     <Article
                         key={article._id}

@@ -1,6 +1,5 @@
 import './navLinks.scss'
 import NavLink from './NavLink/NavLink'
-import { Link } from 'react-router-dom'
 
 export default function Bottom({ specifyNav, flexDirection }) {
     const navLinkNames = [

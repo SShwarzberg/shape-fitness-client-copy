@@ -1,21 +1,23 @@
-import { useEffect } from 'react'
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './article.scss'
+import { pathContext } from '../../../App'
+import { useContext } from 'react'
 
-export default function Article({ article, articleStyle, handleClick }) {
+export default function Article({ article, articleStyle }) {
+    const { pathName, setPathName } = useContext(pathContext)
     const linkStyles = {
         textDecoration: 'inherit',
         color: 'inherit',
     }
+    function handleClick() {
+        setPathName(window.location.pathname)
+    }
     return (
-        <NavLink
-            className="navlink"
-            style={linkStyles}
-            to={`/readarticle/${article._id}`}
-        >
-            <div
-                className={`article article-${articleStyle}`}
+        <div className={`article article-${articleStyle}`}>
+            <NavLink
+                className="navlink"
+                style={linkStyles}
+                to={`/readarticle/${article._id}`}
                 onClick={handleClick}
             >
                 <img
@@ -33,7 +35,7 @@ export default function Article({ article, articleStyle, handleClick }) {
                     <h1 className="title">{article.title}</h1>
                     <p className="author">{article.author}</p>
                 </div>
-            </div>
-        </NavLink>
+            </NavLink>
+        </div>
     )
 }

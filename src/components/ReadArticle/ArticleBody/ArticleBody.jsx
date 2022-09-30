@@ -4,14 +4,16 @@ import Paragraph from './Paragraph/Paragraph'
 import ArticleHeading1 from './ArticleHeading1/ArticleHeading1'
 import ArticleHeading2 from './ArticleHeading2/ArticleHeading2'
 import { nanoid } from 'nanoid'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function ArticleBody({ articleBody, headerClicked, img }) {
+    const inputRef = useRef()
     useEffect(() => {
         const titles = Array.from(document.querySelectorAll('.article-heading'))
+
         titles.map((title, i) => {
             if (
-                headerClicked
+                headerClicked.target.innerHTML
                     .replaceAll('>>h1', '')
                     .replaceAll('<', '')
                     .replaceAll('\n', '') === title.id.replaceAll('_', ' ')
@@ -20,10 +22,17 @@ export default function ArticleBody({ articleBody, headerClicked, img }) {
             }
         })
     }, [headerClicked])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className="article-body">
             <img src={img} alt="" className="article-main-img" />
-            <div className="photo-credit">PHOTO: GETTY IMAGES</div>
+            <div className="photo-credit" ref={inputRef}>
+                PHOTO: GETTY IMAGES
+            </div>
             {articleBody.map((paragraph) => {
                 if (paragraph.includes('>>p')) {
                     return <Paragraph key={nanoid()} paragraph={paragraph} />

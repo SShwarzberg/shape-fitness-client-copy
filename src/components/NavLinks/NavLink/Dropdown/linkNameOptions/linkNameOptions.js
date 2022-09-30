@@ -32,7 +32,7 @@ export const foodNNutritionOptions = [
     'Vitamins and Supplements',
 ]
 
-export const lifestyleOptions = ['Astrology', 'TravelNRetreats']
+export const lifestyleOptions = ['Astrology', 'Travel-N-Retreats']
 
 export const apparelNGearOptions = [
     'Fashion',

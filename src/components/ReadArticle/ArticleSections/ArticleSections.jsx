@@ -17,9 +17,11 @@ export default function ArticleSections({
         )
     })
     return (
-        <div className="article-sections">
-            <h1 className="article-sections-header">In This Article</h1>
-            <div className="article-sections-list">{articleTitles}</div>
-        </div>
+        articleTitles.length > 1 && (
+            <div className="article-sections">
+                <h1 className="article-sections-header">In This Article</h1>
+                <div className="article-sections-list">{articleTitles}</div>
+            </div>
+        )
     )
 }

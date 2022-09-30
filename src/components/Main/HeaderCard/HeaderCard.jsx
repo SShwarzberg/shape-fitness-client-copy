@@ -1,5 +1,6 @@
 import Socials from '../../Socials/Socials'
 import './headerCard.scss'
+import { Link } from 'react-router-dom'
 
 export default function HeaderCard({ category }) {
     const pageHeadings = [
@@ -57,7 +58,7 @@ export default function HeaderCard({ category }) {
             heading:
                 ' What is a low carb diet? What are the benefits of a keto diet? Find answers to these and other questions about nutrition, healthy diets, supplements, and ingredients, plus the truth about the latest food trends. ',
             relatedCategories: [
-                'Dietary Choice',
+                'Dietary Choices',
                 'Meal Ideas',
                 'Vitamins and Supplements',
             ],
@@ -66,7 +67,7 @@ export default function HeaderCard({ category }) {
             category: 'Lifestyle',
             heading:
                 ' Tips and info on beauty, fashion, travel, health, sex, love and everything else you need to live a fuller and happier life. ',
-            relatedCategories: ['Astrology', "Travel 'n retreats"],
+            relatedCategories: ['Astrology', 'Travel n Retreats'],
         },
         {
             category: 'Apparel and Gear',
@@ -103,9 +104,9 @@ export default function HeaderCard({ category }) {
             return item.relatedCategories.map((category, i) => {
                 if (i < 5)
                     return (
-                        <a href="">
+                        <Link to={`/${category.replaceAll(' ', '-')}`}>
                             <li>{category}</li>
-                        </a>
+                        </Link>
                     )
             })
     })

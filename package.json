@@ -3,6 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "proxy": "https://celadon-peony-cd3125.netlify.app/.netlify/functions/api",
     "scripts": {
         "dev": "vite --port 3001 --host",
         "build": "vite build",

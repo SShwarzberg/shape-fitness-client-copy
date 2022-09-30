@@ -13,10 +13,19 @@
             text-underline-offset: 0.75rem;
             font-weight: 900;
             font-family: "Times New Roman", Times, serif;
+            @media screen and (max-width: 600px) {
+                line-height: 3rem;
+                font-size: 2rem;
+                margin: 0 0 30px;
+            }
         }
         .article-subtitle {
             font-size: 1.125rem;
             font-weight: 500;
+            @media screen and (max-width: 600px) {
+                font-size: 0.9rem;
+                margin: 0 0 30px;
+            }
         }
     }
     .article-header-bottom {

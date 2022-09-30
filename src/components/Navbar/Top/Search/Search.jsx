@@ -4,7 +4,7 @@ import close from '../../../../assets/close.png'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Search({ sidebar }) {
+export default function Search() {
     const inputRef = useRef()
     const [openSearch, setOpenSearch] = useState(false)
     const [searchInput, setSearchInput] = useState('')
@@ -19,11 +19,14 @@ export default function Search({ sidebar }) {
 
     function fetchSearchResults(value) {
         fetch(
-            'https://celadon-peony-cd3125.netlify.app/.netlify/functions/api/search',
+            'https://shape-backend-server.netlify.app/.netlify/functions/api/search',
             {
                 method: 'POST',
                 body: JSON.stringify({ data: (value && value) || searchInput }),
-                headers: { 'content-type': 'application/json' },
+                headers: {
+                    'content-type': 'application/json',
+                    accepts: 'application/json',
+                },
                 mode: 'cors',
             }
         )
